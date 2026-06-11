@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent Application Form</title>
+    <link rel="stylesheet" href="style.css">
+
+    
+</head>
+<body>
+
+<div class="container">
+
+    <h1>RENT APPLICATION FORM</h1>
+
+    <form action="billing.html">
+
+        <label>Name</label>
+        <input type="text" placeholder="Full Name">
+
+        <label>Email</label>
+        <div class="input-icon">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="email" placeholder="Email Address">
+        </div>
+
+        <label>Phone Number</label>
+        <input type="tel" placeholder="+1 234 567 890">
+
+        <label>Gender</label>
+
+        <div class="radio-card">
+            <input type="radio" name="gender">
+            <span>Male</span>
+        </div>
+
+        <div class="radio-card">
+            <input type="radio" name="gender">
+            <span>Female</span>
+        </div>
+
+        <label>Marital Status</label>
+
+        <div class="radio-card">
+            <input type="radio" name="status">
+            <span>Single</span>
+        </div>
+
+        <div class="radio-card">
+            <input type="radio" name="status">
+            <span>Married</span>
+        </div>
+
+        <div class="radio-card">
+            <input type="radio" name="status">
+            <span>Divorced</span>
+        </div>
+
+        <label>Upload Valid ID</label>
+
+        <div class="upload-box">
+            <i class="fa-solid fa-folder"></i>
+            <p>Drag & Drop a file or <span>Browse</span></p>
+            <input type="file" id="idUpload">
+        </div>
+
+        <img id="preview" style="display:none;">
+        <hr>
+
+        <h2>Current Home Address</h2>
+
+        <label>Address</label>
+        <div class="input-icon">
+            <i class="fa-solid fa-location-dot"></i>
+            <input type="text">
+        </div>
+
+        <label>City</label>
+        <input type="text">
+
+        <label>State / Province</label>
+        <select name="state" required>
+        <option value="">Select State</option>
+
+        <option>Alabama</option>
+        <option>Alaska</option>
+        <option>Arizona</option>
+        <option>Arkansas</option>
+        <option>California</option>
+        <option>Colorado</option>
+        <option>Connecticut</option>
+        <option>Delaware</option>
+        <option>Florida</option>
+        <option>Georgia</option>
+        <option>Hawaii</option>
+        <option>Idaho</option>
+        <option>Illinois</option>
+        <option>Indiana</option>
+        <option>Iowa</option>
+        <option>Kansas</option>
+        <option>Kentucky</option>
+        <option>Louisiana</option>
+        <option>Maine</option>
+        <option>Maryland</option>
+        <option>Massachusetts</option>
+        <option>Michigan</option>
+        <option>Minnesota</option>
+        <option>Mississippi</option>
+        <option>Missouri</option>
+        <option>Montana</option>
+        <option>Nebraska</option>
+        <option>Nevada</option>
+        <option>New Hampshire</option>
+        <option>New Jersey</option>
+        <option>New Mexico</option>
+        <option>New York</option>
+        <option>North Carolina</option>
+        <option>North Dakota</option>
+        <option>Ohio</option>
+        <option>Oklahoma</option>
+        <option>Oregon</option>
+        <option>Pennsylvania</option>
+        <option>Rhode Island</option>
+        <option>South Carolina</option>
+        <option>South Dakota</option>
+        <option>Tennessee</option>
+        <option>Texas</option>
+        <option>Utah</option>
+        <option>Vermont</option>
+        <option>Virginia</option>
+        <option>Washington</option>
+        <option>West Virginia</option>
+        <option>Wisconsin</option>
+        <option>Wyoming</option>
+    </select>
+
+        <label>ZIP / Postal Code</label>
+        <input type="text">
+
+        <label>Reason For Moving Out</label>
+        <textarea rows="4"></textarea>
+
+        <label>Job</label>
+        <input type="text">
+
+        <label>Monthly Income</label>
+        <div class="input-icon">
+            <i class="fa-solid fa-dollar-sign"></i>
+            <input type="number">
+        </div>
+
+        <label>Have You Ever Been Convicted Of A Felony?</label>
+        <textarea rows="3"
+            placeholder="If yes, please explain"></textarea>
+
+        <label>Any Pets?</label>
+        <input type="text"
+            placeholder="Type, Breed, Weight">
+
+        <label>Do You Smoke?</label>
+
+        <div class="radio-card">
+            <input type="radio" name="smoke">
+            <span>Yes</span>
+        </div>
+
+        <div class="radio-card">
+            <input type="radio" name="smoke">
+            <span>No</span>
+        </div>
+
+        <label>Vehicle?</label>
+
+        <div class="radio-card">
+            <input type="radio" name="vehicle">
+            <span>Yes</span>
+        </div>
+
+        <div class="radio-card">
+            <input type="radio" name="vehicle">
+            <span>No</span>
+        </div>
+
+        <label>How Long Do You Plan To Stay?</label>
+        <input type="text">
+
+        <label>How Many People Will Live In The Property Unit?</label>
+        <input type="number">
+
+        <hr>
+
+        <label>How Many People Will Live In The Property Unit?</label>
+        <input type="number" min="1">
+
+        <label>Desired Move-In Date</label>
+        <div class="input-icon">
+            <i class="fa-solid fa-calendar"></i>
+            <input type="date">
+        </div>
+
+        <label>What Deposit Do You Currently Have Available For This Rental?</label>
+
+        <label class="radio-card">
+            <input type="radio" name="deposit" value="security">
+            <span>Security Deposit</span>
+        </label>
+
+        <label class="radio-card">
+            <input type="radio" name="deposit" value="security_first_month">
+            <span>Security Deposit & First Month Rent</span>
+        </label>
+
+        <hr>
+
+        <h2>TERMS</h2>
+
+        <div class="checkbox-card">
+            <input type="checkbox" id="terms">
+            <label for="terms" class="checkbox-text">
+                By clicking the checkbox, I verify that the statements in this
+                application are true and correct; I understand that false or lack
+                of information may result in the rejection of this application.
+            </label>
+        </div>
+
+        <hr>
+
+        <h2>PLEASE NOTE</h2>
+
+        <div class="note-box">
+            <p>
+                Your application fee is meant to be paid immediately after
+                you've submitted your application to ensure quick approval.
+            </p>
+
+            <p>
+                Once you're approved the application fee will be subtracted
+                from your original first month rent.
+            </p>
+
+            <p>
+                Your application fee is also completely refundable if you
+                decide to cancel before the showing.
+            </p>
+        </div>
+
+        <div class="checkbox-card agreement">
+            <input type="checkbox" id="agree">
+            <label for="agree">
+                I understand and agree
+            </label>
+        </div>
+
+
+        <button type="submit">Submit Application</button>
+        
+
+    </form>
+
+</div>
+
+
+<script>
+const upload = document.getElementById("idUpload");
+const preview = document.getElementById("preview");
+
+upload.addEventListener("change", function () {
+    const file = this.files[0];
+
+    if(file){
+        preview.src = URL.createObjectURL(file);
+        preview.style.display = "block";
+    }
+});
+</script>
+</body>
+</html>
+
+

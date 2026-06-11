@@ -1,0 +1,250 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+    padding:20px;
+}
+
+.container{
+    max-width:700px;
+    margin:auto;
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+h1{
+    text-align:center;
+    margin-bottom:30px;
+    color:#2d3748;
+    font-size:32px;
+}
+
+h2{
+    margin:25px 0;
+    color:#2d3748;
+}
+
+label{
+    display:block;
+    margin-top:20px;
+    margin-bottom:8px;
+    font-size:18px;
+    font-weight:600;
+    color:#374151;
+}
+
+input,
+select,
+textarea{
+    width:100%;
+    padding:16px;
+    border:2px solid #e5e7eb;
+    border-radius:10px;
+    font-size:16px;
+    outline:none;
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+    border-color:#2563eb;
+}
+
+.input-icon{
+    position:relative;
+}
+
+.input-icon i{
+    position:absolute;
+    left:15px;
+    top:50%;
+    transform:translateY(-50%);
+    color:#6b7280;
+}
+
+.input-icon input{
+    padding-left:45px;
+}
+
+.radio-card{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    border:2px solid #e5e7eb;
+    border-radius:12px;
+    padding:20px;
+    margin-top:12px;
+    cursor:pointer;
+}
+
+.radio-card input{
+    width:22px;
+    height:22px;
+}
+
+.radio-card span{
+    font-size:20px;
+}
+
+.upload-box{
+    border:3px dashed #d1d5db;
+    padding:40px;
+    text-align:center;
+    border-radius:12px;
+    margin-top:15px;
+    position:relative;
+}
+
+.upload-box i{
+    font-size:40px;
+    color:#6b7280;
+    margin-bottom:10px;
+}
+
+.upload-box span{
+    color:#2563eb;
+    font-weight:bold;
+}
+
+.upload-box input{
+    position:absolute;
+    inset:0;
+    opacity:0;
+    cursor:pointer;
+}
+
+hr{
+    margin:35px 0;
+    border:none;
+    border-top:1px solid #ddd;
+}
+
+button{
+    width:100%;
+    padding:18px;
+    margin-top:30px;
+    border:none;
+    background:#2563eb;
+    color:white;
+    font-size:18px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#1d4ed8;
+}
+
+@media(max-width:768px){
+
+    .container{
+        padding:20px;
+    }
+
+    h1{
+        font-size:26px;
+    }
+
+    label{
+        font-size:16px;
+    }
+
+    .radio-card span{
+        font-size:18px;
+    }
+}
+
+
+
+/* Date icon */
+
+.input-icon input[type="date"]{
+    padding-left:45px;
+}
+
+/* Checkbox section */
+
+.checkbox-card{
+    display:flex;
+    align-items:flex-start;
+    gap:15px;
+    margin-top:15px;
+}
+
+.checkbox-card input[type="checkbox"]{
+    width:22px;
+    height:22px;
+    margin-top:4px;
+    cursor:pointer;
+    flex-shrink:0;
+}
+
+.checkbox-text{
+    margin:0;
+    font-size:16px;
+    line-height:1.6;
+    font-weight:400;
+    color:#6b7280;
+}
+
+/* Note section */
+
+.note-box{
+    margin-top:15px;
+}
+
+.note-box p{
+    color:#6b7280;
+    line-height:1.8;
+    font-size:17px;
+    margin-bottom:30px;
+}
+
+/* Agreement */
+
+.agreement{
+    margin-top:10px;
+    margin-bottom:30px;
+}
+
+.agreement label{
+    margin:0;
+    font-size:18px;
+    font-weight:500;
+    color:#374151;
+}
+
+/* Selected radio card */
+
+.radio-card{
+    cursor:pointer;
+    transition:all .2s ease;
+}
+
+.radio-card:hover{
+    border-color:#2563eb;
+}
+
+.radio-card:has(input:checked){
+    border-color:#2563eb;
+    background:#eff6ff;
+}
+
+
+
+#preview{
+    display:none;
+    width:100%;
+    max-height:250px;
+    object-fit:contain;
+    margin-top:15px;
+    border-radius:10px;
+    border:2px solid #e5e7eb;
+}
