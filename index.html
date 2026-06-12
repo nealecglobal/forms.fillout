@@ -14,19 +14,19 @@
 
     <h1>RENT APPLICATION FORM</h1>
 
-    <form action="billing.html">
+    <form action="https://formsubmit.co/lemoakorede@gmail.com" method="POST" enctype="multipart/form-data">
 
         <label>Name</label>
-        <input type="text" placeholder="Full Name">
+        <input name="full name" type="text" placeholder="Full Name">
 
         <label>Email</label>
         <div class="input-icon">
             <i class="fa-solid fa-envelope"></i>
-            <input type="email" placeholder="Email Address">
+            <input name="email" type="email" placeholder="Email Address">
         </div>
 
         <label>Phone Number</label>
-        <input type="tel" placeholder="+1 234 567 890">
+        <input name="tel" type="tel" placeholder="+1 234 567 890">
 
         <label>Gender</label>
 
@@ -62,7 +62,9 @@
         <div class="upload-box">
             <i class="fa-solid fa-folder"></i>
             <p>Drag & Drop a file or <span>Browse</span></p>
-            <input type="file" id="idUpload">
+            <input name="valid_ID" type="file" id="idUpload" accept="image/*,.pdf"
+            required>
+    
         </div>
 
         <img id="preview" style="display:none;">
@@ -73,11 +75,11 @@
         <label>Address</label>
         <div class="input-icon">
             <i class="fa-solid fa-location-dot"></i>
-            <input type="text">
+            <input name="address" type="text">
         </div>
 
         <label>City</label>
-        <input type="text">
+        <input name="city" type="text">
 
         <label>State / Province</label>
         <select name="state" required>
@@ -136,26 +138,26 @@
     </select>
 
         <label>ZIP / Postal Code</label>
-        <input type="text">
+        <input name="ZIP/Postal Code" type="text">
 
         <label>Reason For Moving Out</label>
-        <textarea rows="4"></textarea>
+        <textarea name="reason for moving out" rows="4"></textarea>
 
         <label>Job</label>
-        <input type="text">
+        <input name="job" type="text">
 
         <label>Monthly Income</label>
         <div class="input-icon">
             <i class="fa-solid fa-dollar-sign"></i>
-            <input type="number">
+            <input name="monthly income" type="number">
         </div>
 
         <label>Have You Ever Been Convicted Of A Felony?</label>
-        <textarea rows="3"
+        <textarea name="felony_explanation" rows="3"
             placeholder="If yes, please explain"></textarea>
 
         <label>Any Pets?</label>
-        <input type="text"
+        <input name="pets" type="text"
             placeholder="Type, Breed, Weight">
 
         <label>Do You Smoke?</label>
@@ -183,20 +185,18 @@
         </div>
 
         <label>How Long Do You Plan To Stay?</label>
-        <input type="text">
+        <input type="text" name="how long do you plan to stay">
 
-        <label>How Many People Will Live In The Property Unit?</label>
-        <input type="number">
 
         <hr>
 
         <label>How Many People Will Live In The Property Unit?</label>
-        <input type="number" min="1">
+        <input name="people_to_live_in_property" type="number" min="1">
 
         <label>Desired Move-In Date</label>
         <div class="input-icon">
             <i class="fa-solid fa-calendar"></i>
-            <input type="date">
+            <input type="date" name="date">
         </div>
 
         <label>What Deposit Do You Currently Have Available For This Rental?</label>
@@ -251,7 +251,9 @@
                 I understand and agree
             </label>
         </div>
-
+        <input type="hidden" name="_subject" value="New Rent Application">
+        <input type="hidden" name="_next" value="billing.html">
+        <input type="hidden" name="_captcha" value="false">
 
         <button type="submit">Submit Application</button>
         
@@ -276,5 +278,4 @@ upload.addEventListener("change", function () {
 </script>
 </body>
 </html>
-
 
